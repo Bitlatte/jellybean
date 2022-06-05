@@ -1,14 +1,13 @@
 {
   "name": "@bitlatte/jellybean",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Component Library",
   "scripts": {
     "ts-types": "tsc --emitDeclarationOnly --outDir dist",
     "build": "npm run lint && rimraf dist && node ./esbuild.mjs && npm run ts-types",
     "lint": "eslint src --fix"
   },
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/react": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
@@ -29,5 +28,8 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/Bitlatte"
+  }
 }
